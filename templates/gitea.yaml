@@ -10,12 +10,12 @@ spec:
     server: https://kubernetes.default.svc
     namespace: gitea
   source:
-    path: helm-charts/gitea
+    path: ../helm-charts/gitea
     repoURL: git@github.com:aliasboink/raspberrypi_argocd_charts.git
     targetRevision: main
     helm:
       valueFiles: 
-        - helm-charts/gitea/values.yaml
+        - ../helm-charts/gitea/values.yaml
     
   syncPolicy:
     automated:
