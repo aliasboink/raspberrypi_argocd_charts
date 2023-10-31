@@ -9,7 +9,6 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: gitea
-  project: default
   source:
     path: helm-charts/gitea
     repoURL: git@github.com:aliasboink/raspberrypi_argocd_charts.git
