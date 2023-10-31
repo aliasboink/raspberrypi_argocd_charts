@@ -15,7 +15,8 @@ spec:
     repoURL: git@github.com:aliasboink/raspberrypi_argocd_charts.git
     targetRevision: HEAD
     helm:
-      valueFiles: helm-charts/gitea/values.yaml
+      valueFiles: 
+        - helm-charts/gitea/values.yaml
     
   syncPolicy:
     automated:
