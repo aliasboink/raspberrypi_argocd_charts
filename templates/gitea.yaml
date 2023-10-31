@@ -16,7 +16,7 @@ spec:
     helm:
       valueFiles: 
         - ../helm-charts/gitea/values.yaml
-    
+  project: default
   syncPolicy:
     automated:
       prune: true
