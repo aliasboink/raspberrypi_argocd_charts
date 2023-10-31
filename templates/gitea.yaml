@@ -2,13 +2,13 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: gitea
-  namespace: gitea
+  namespace: default
   finalizers:
     - resources-finalizer.gitea.argoproj.io
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: gitea
+    namespace: default
   source:
     path: ../helm-charts/gitea
     repoURL: git@github.com:aliasboink/raspberrypi_argocd_charts.git
