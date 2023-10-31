@@ -13,7 +13,7 @@ spec:
   source:
     path: helm-charts/gitea
     repoURL: git@github.com:aliasboink/raspberrypi_argocd_charts.git
-    targetRevision: HEAD
+    targetRevision: main
     helm:
       valueFiles: 
         - helm-charts/gitea/values.yaml
