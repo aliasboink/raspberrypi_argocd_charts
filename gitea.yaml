@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: stackstorm
+  namespace: gitea
+  finalizers:
+    - resources-finalizer.gitea.argoproj.io
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: gitea
+  project: default
+  source:
+    path: helm-charts/gitea
+    repoURL: https://github.com/aliasboink/raspberrypi_argocd_charts
+    targetRevision: HEAD
+    
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

@@ -1,0 +1,10 @@
+apiVersion: v2
+appVersion: 1.20.5
+name: rpi-gitea
+version: 1.0.0
+description: Gitea Bitnami helmchart.
+type: application 
+dependencies:
+  - name: gitea1
+    version: 1.0.6
+    repository: https://charts.bitnami.com/bitnami
