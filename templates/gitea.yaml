@@ -15,7 +15,7 @@ spec:
     targetRevision: main
     helm:
       valueFiles: 
-        - ../helm_charts/gitea/values.yaml
+        - ./values.yaml
   project: default
   syncPolicy:
     automated:
