@@ -6,8 +6,6 @@ metadata:
   finalizers:
     - resources-finalizer.gitea.argoproj.io
 spec:
-  envConfig: |
-    BITNAMI_DEBUG=true
   destination:
     server: https://kubernetes.default.svc
     namespace: default
