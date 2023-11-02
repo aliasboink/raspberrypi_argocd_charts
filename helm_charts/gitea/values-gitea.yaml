@@ -3,11 +3,11 @@ gitea:
     ports:
       http: 8888
       ssh: 22
-  postgresql:
-    enabled: true
-    auth:
-      username: bn_gitea
-      password: wAyjbLj0Ug
+  # postgresql:
+  #   enabled: true
+  #   auth:
+  #     username: bn_gitea
+  #     password: wAyjbLj0Ug
 
 
 
