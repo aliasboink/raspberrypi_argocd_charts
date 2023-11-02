@@ -2,7 +2,7 @@ gitea:
   service:
     ports:
       http: 8888
-      ssh: 22
+      ssh: 2222
   # postgresql:
   #   enabled: true
   #   auth:
