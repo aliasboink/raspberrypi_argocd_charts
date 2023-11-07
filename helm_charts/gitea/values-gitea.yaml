@@ -2,12 +2,4 @@ gitea:
   service:
     ports:
       http: 8888
-      ssh: 1500
-  postgresql:
-    enabled: true
-    auth:
-      username: bn_gitea
-      password: wAyjbLj0Ug
-
-
-
+      ssh: 22222
