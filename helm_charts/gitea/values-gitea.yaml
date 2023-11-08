@@ -2,7 +2,7 @@ gitea:
   service:
     ports:
       http: 8888
-      ssh: 7999
+      ssh: 22222
 
   # ingress:
   #   ## @param ingress.enabled Enable ingress controller resource
