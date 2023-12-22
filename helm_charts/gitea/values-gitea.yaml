@@ -97,7 +97,7 @@ gitea:
   ## @param appName Gitea application name
   ## ref: https://github.com/bitnami/containers/tree/main/bitnami/gitea#configuration
   ##
-  appName: example
+  appName: River Tea Git
   ## @param runMode Gitea application host
   ## ref: https://github.com/bitnami/containers/tree/main/bitnami/gitea#configuration
   ##
