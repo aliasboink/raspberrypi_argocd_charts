@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: gitea
   source:
     path: helm_charts/gitea
     repoURL: git@github.com:aliasboink/raspberrypi_argocd_charts.git
