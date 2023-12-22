@@ -417,7 +417,7 @@ gitea:
     ##
     ports:
       http: 8888
-      ssh: 22
+      ssh: 22222
     ## @param service.loadBalancerSourceRanges Restricts access for LoadBalancer (only with `service.type: LoadBalancer`)
     ## e.g:
     ## loadBalancerSourceRanges:
