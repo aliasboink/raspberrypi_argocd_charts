@@ -108,8 +108,8 @@ gitea:
     ## @param service.http.loadBalancerSourceRanges Source range filter for http loadbalancer
     ## @param service.http.annotations HTTP service annotations
     http:
-      type: ClusterIP
-      port: 3000
+      type: LoadBalancer
+      port: 8888
       clusterIP: None
       loadBalancerIP:
       nodePort:
