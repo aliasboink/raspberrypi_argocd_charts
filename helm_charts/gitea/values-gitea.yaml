@@ -394,8 +394,11 @@ gitea:
       APP_NAME: "Gitty"
       #  RUN_MODE: dev
       server:
-        SSH_PORT: 22 # rootful image
+        SSH_PORT: 2222 # rootful image # To 2222 just in case, even though it's not used
         SSH_LISTEN_PORT: 2222 # rootless image
+      ui:
+        meta: 
+          DESCRIPTION: "Tea on a Raspberry"
     #
     #  security:
     #    PASSWORD_COMPLEXITY: spec
