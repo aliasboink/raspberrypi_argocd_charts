@@ -397,7 +397,7 @@ gitea:
         SSH_PORT: 2222 # rootful image # To 2222 just in case, even though it's not used
         SSH_LISTEN_PORT: 2222 # rootless image
       ui:
-        DEFAULT_THEME: arc-green
+        DEFAULT_THEME: "arc-green"
         meta: 
           DESCRIPTION: "Tea on a Raspberry"
     #
