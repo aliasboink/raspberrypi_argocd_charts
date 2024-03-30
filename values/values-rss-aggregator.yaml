@@ -1,0 +1,32 @@
+rss-aggregator:
+  backend:
+    replicas: 1
+    port: "8080"
+    dbUrl: "postgres://postgres:123123@postgresql:5432/rssagg_stripped?sslmode=disable"
+    apiKey: "wompwomp"
+
+    service:
+      type: LoadBalancer
+      port: 8008
+
+    image:
+      repository: aliasboink/testing
+      pullPolicy: Always
+      # Overrides the image tag whose default is the chart appVersion.
+      tag: "agg-1"
+
+  frontend:
+    replicas: 1
+    image:
+      repository: aliasboink/testing
+      pullPolicy: Always
+      # Overrides the image tag whose default is the chart appVersion.
+      tag: "fe-1"
+
+    service:
+      type: LoadBalancer
+      port: 3000
+
+  nameOverride: ""
+  fullnameOverride: ""
+

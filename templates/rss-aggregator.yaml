@@ -1,22 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: gitea
+  name: rss-aggregator
   namespace: argocd
   finalizers:
-    - resources-finalizer.gitea.argoproj.io
+    - resources-finalizer.rss-aggregator.argoproj.io
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: gitea
+    namespace: rss-aggregator
   project: default
   sources:
-  - repoURL: 'https://dl.gitea.com/charts/'
-    chart: gitea
-    targetRevision: 10.0.1
+  - repoURL: 'https://github.com/aliasboink/go_rss_aggregator_stripped_helm_chart'
+    chart: rss-aggregator
+    targetRevision: v0.0.1
     helm:
       valueFiles:
-      - $valuesRepo/values/values-gitea.yaml
+      - $valuesRepo/values/values-rss-aggregator.yaml
   - repoURL: 'https://github.com/aliasboink/raspberrypi_argocd_charts'
     targetRevision: main
     ref: valuesRepo
