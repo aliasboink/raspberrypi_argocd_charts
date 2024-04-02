@@ -400,6 +400,15 @@ gitea:
     ui.meta:
         DESCRIPTION: "Tea on a Raspberry"
         AUTHOR: "Adrian Docs"
+    
+    database:
+      DB_TYPE: postgres
+      HOST: postgresql.postgresql-local.svc.cluster.local:5432
+      NAME: giteadb
+      USER: gitea
+      PASSWD: gitea
+      SCHEMA: public
+
   #
   #  security:
   #    PASSWORD_COMPLEXITY: spec
@@ -511,7 +520,7 @@ postgresql-ha:
       database: gitea
       password: gitea
       username: gitea
-  enabled: true
+  enabled: false
   postgresql:
     repmgrPassword: changeme2
     postgresPassword: changeme1
