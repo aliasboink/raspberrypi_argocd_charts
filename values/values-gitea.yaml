@@ -403,10 +403,6 @@ gitea:
     
     database:
       DB_TYPE: postgres
-      HOST: postgresql.postgresql-local.svc.cluster.local:5432
-      NAME: giteadb
-      USER: gitea
-      PASSWD: gitea
       SCHEMA: public
 
   #
@@ -421,8 +417,27 @@ gitea:
   #       name: gitea-app-ini-plaintext
 
   ## @param gitea.additionalConfigFromEnvs Additional configuration sources from environment variables
-  additionalConfigFromEnvs: []
-
+  additionalConfigFromEnvs:
+    - name: GITEA__DATABASE__HOST
+      valueFrom:
+        secretKeyRef:
+          name: gitea-postgresql-credentials
+          key: host
+    - name: GITEA__DATABASE__PASSWD
+      valueFrom:
+        secretKeyRef:
+          name: gitea-postgresql-credentials
+          key: password
+    - name: GITEA__DATABASE__NAME
+      valueFrom:
+        secretKeyRef:
+          name: gitea-postgresql-credentials
+          key: dbname
+    - name: GITEA__DATABASE__USER
+      valueFrom:
+        secretKeyRef:
+          name: gitea-postgresql-credentials
+          key: user
   ## @param gitea.podAnnotations Annotations for the Gitea pod
   podAnnotations: {}
 
