@@ -1,8 +1,6 @@
 backend:
   replicas: 1
   port: "8080"
-  dbUrl: "postgres://postgres:123123@postgresql.postgresql-local.svc.cluster.local:5432/rssagg_stripped?sslmode=disable"
-  apiKey: "wompwomp"
 
   service:
     type: LoadBalancer
