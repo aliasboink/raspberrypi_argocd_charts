@@ -7,16 +7,16 @@ backend:
     port: 8008
 
   image:
-    repository: aliasboink/testing
+    repository: aliasboink/rss-aggregator-stripped
     pullPolicy: Always
-    tag: "agg-1"
+    tag: "backend-v0.0.1"
 
 frontend:
   replicas: 1
   image:
-    repository: aliasboink/testing
+    repository: aliasboink/rss-aggregator-stripped
     pullPolicy: Always
-    tag: "fe-1"
+    tag: "frontend-v0.0.1"
 
   service:
     type: LoadBalancer
