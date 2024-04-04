@@ -341,7 +341,7 @@ gitea:
   admin:
     # existingSecret: gitea-admin-secret
     existingSecret:
-    username: gitea_admin
+    username: aliasboink
     password: r8sA8CPHD9!bt6d
     email: "gitea@local.domain"
 
