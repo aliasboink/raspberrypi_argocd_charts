@@ -402,7 +402,7 @@ gitea:
       AUTHOR: "Adrian Docs"
     service:
       DISABLE_REGISTRATION: false
-      REQUIRE_SIGNIN_VIEW: true
+      REQUIRE_SIGNIN_VIEW: false
       SHOW_REGISTRATION_BUTTON: false
     
     database:
