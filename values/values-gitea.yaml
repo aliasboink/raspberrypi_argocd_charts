@@ -398,8 +398,12 @@ gitea:
     ui:
       DEFAULT_THEME: "arc-green"
     ui.meta:
-        DESCRIPTION: "Tea on a Raspberry"
-        AUTHOR: "Adrian Docs"
+      DESCRIPTION: "Tea on a Raspberry"
+      AUTHOR: "Adrian Docs"
+    service:
+      DISABLE_REGISTRATION: false
+      REQUIRE_SIGNIN_VIEW: true
+      SHOW_REGISTRATION_BUTTON: false
     
     database:
       DB_TYPE: postgres
