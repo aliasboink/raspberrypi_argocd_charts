@@ -9,7 +9,7 @@ backend:
   image:
     repository: aliasboink/rss-aggregator-stripped
     pullPolicy: Always
-    tag: "backend-v0.0.1"
+    tag: "backend-v0.0.2"
 
 frontend:
   replicas: 1
