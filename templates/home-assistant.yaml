@@ -1,22 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kube-prometheus-stack
+  name: home-assistant
   namespace: argocd
   finalizers:
-    - resources-finalizer.prometheus.argoproj.io
+    - resources-finalizer.homeassistant.argoproj.io
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: prometheus
+    namespace: home-assistant
   project: default
   sources:
-  - repoURL: 'https://prometheus-community.github.io/helm-charts'
-    chart: kube-prometheus-stack
-    targetRevision: 65.1.1
+  - repoURL: 'https://github.com/pajikos/home-assistant-helm-chart'
+    path: 'charts/home-assistant'
+    targetRevision: 'home-assistant-0.2.102'
     helm:
       valueFiles:
-      - $valuesRepo/values/values-kube-prometheus-stack.yaml
+      - $valuesRepo/values/values-home-assistant.yaml
   - repoURL: 'https://github.com/aliasboink/raspberrypi_argocd_charts'
     targetRevision: main
     ref: valuesRepo
@@ -26,4 +26,3 @@ spec:
       selfHeal: true
     syncOptions:
     - CreateNamespace=true
-    - ServerSideApply=true

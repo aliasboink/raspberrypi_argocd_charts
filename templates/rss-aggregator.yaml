@@ -13,7 +13,7 @@ spec:
   sources:
   - repoURL: 'https://github.com/aliasboink/go_rss_aggregator_stripped_helm_chart'
     path: ./
-    targetRevision: main
+    targetRevision: 'v0.0.3'
     helm:
       valueFiles:
       - $valuesRepo/values/values-rss-aggregator.yaml
